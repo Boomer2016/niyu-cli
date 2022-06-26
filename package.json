@@ -1,0 +1,36 @@
+{
+  "name": "niyu-cli",
+  "version": "1.0.0",
+  "description": "niyu-cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "niyu": "./bin/cli"
+  },
+  "keywords": [
+    "cli",
+    "javascript",
+    "node"
+  ],
+  "author": "niyu_niyu",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.1.1",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.1",
+    "eslint": "5.13.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-loader": "2.1.2",
+    "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.12.4",
+    "lint-staged": "8.1.0"
+  }
+}
