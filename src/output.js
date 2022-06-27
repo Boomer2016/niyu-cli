@@ -37,7 +37,7 @@ const unrelatedFileRemove = async (parentFile, callback) => {
     await fse.remove(parentFile + '/.git');
     await fse.remove(parentFile + '/package-lock.json');
     callback && callback();
-    rewriteJson();
+    await rewriteJson();
     log(green('remove unrelated file success!'));
   } catch (err) {
     console.error(red(err));
@@ -58,7 +58,7 @@ const renameFile = async() => {
 }
 
 const output = creation => {
-  return new Promise((resolve, reject) => {
+  return new Promise(async(resolve, reject) => {
     // 拿配置信息
     const setting = creation._setting
     // const {projectName} = setting
@@ -74,7 +74,7 @@ const output = creation => {
     fse.mkdirSync(projectPath)
 
     // git clone模板项目
-    downloadByGit(renameFile, tempName)
+    await downloadByGit(renameFile, tempName)
 
     // 将内存中的文件，输出到硬盘上
     resolve()

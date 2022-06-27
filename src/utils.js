@@ -11,7 +11,7 @@ function isWindows() {
   return process.platform === 'win32' || process.env.OSTYPE === 'cygwin' || process.env.OSTYPE === 'msys';
 }
 
-function downloadByGit(callback, template) {
+async function downloadByGit(callback, template) {
   console.log(green('start download'));
   const result = spawn(
     'git',
@@ -20,10 +20,9 @@ function downloadByGit(callback, template) {
   );
   const error = result.error;
   if (error) {
-    console.log(error, 11111111);
     return;
   }
-  callback && callback();
+  await callback && callback();
 }
 
 const currentPath = process.cwd().replace(/\\/g, '/') + '/';
