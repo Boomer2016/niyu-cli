@@ -1,3 +1,3 @@
-# niyu-cli
-## bin/node
+# 前端工程篇-脚手架快速构建PC项目
+## 为什么要有这个项目
 ## npm link
