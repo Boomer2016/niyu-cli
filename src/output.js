@@ -9,6 +9,7 @@ const log = console.log
 const red = chalk.red;
 const green = chalk.green;
 
+// 暂时拿electron-vue这个项目作为模板，具体可根据团队技术栈初始化各种模板
 let tempName = 'https://github.com/SimulatedGREG/electron-vue.git';
 let projectName;
 
